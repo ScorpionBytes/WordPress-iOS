@@ -249,9 +249,16 @@ class NotificationsViewController: UIViewController, UIViewControllerRestoration
 
         if shouldShowPrimeForPush {
             setupNotificationPrompt()
-        } else if AppRatingUtility.shared.shouldPromptForAppReview(section: InlinePrompt.section) {
-            setupAppRatings()
-            self.showInlinePrompt()
+        }
+        // TODO: Remove this when In-App Rating project is shipped
+//        else if AppRatingUtility.shared.shouldPromptForAppReview(section: InlinePrompt.section) {
+//            setupAppRatings()
+//            self.showInlinePrompt()
+//        }
+
+        if !unreadNotificationIds.isEmpty {
+            // Track as significant event for App Rating calculations
+            AppRatingUtility.shared.incrementSignificantEvent()
         }
 
         showNotificationPrimerAlertIfNeeded()
