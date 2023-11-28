@@ -51,9 +51,9 @@ end
 
 def wordpress_kit
   # Anything compatible with 8.9, starting from 8.9.1 which has a breaking change fix
-  pod 'WordPressKit', '~> 8.11'
+  # pod 'WordPressKit', '~> 8.11'
   # pod 'WordPressKit', git: 'https://github.com/wordpress-mobile/WordPressKit-iOS.git', commit: ''
-  # pod 'WordPressKit', git: 'https://github.com/wordpress-mobile/WordPressKit-iOS.git', branch: 'trunk'
+  pod 'WordPressKit', git: 'https://github.com/wordpress-mobile/WordPressKit-iOS.git', branch: 'refactor-oauth-error'
   # pod 'WordPressKit', git: 'https://github.com/wordpress-mobile/WordPressKit-iOS.git', tag: ''
   # pod 'WordPressKit', path: '../WordPressKit-iOS'
 end
@@ -149,7 +149,7 @@ abstract_target 'Apps' do
 
   # pod 'WordPressAuthenticator', '~> 7.3'
   # pod 'WordPressAuthenticator', git: 'https://github.com/wordpress-mobile/WordPressAuthenticator-iOS.git', commit: ''
-  pod 'WordPressAuthenticator', git: 'https://github.com/wordpress-mobile/WordPressAuthenticator-iOS.git', branch: 'translate-login-facade-to-swift'
+  pod 'WordPressAuthenticator', git: 'https://github.com/wordpress-mobile/WordPressAuthenticator-iOS.git', branch: 'adopt-wordpress-oauth-error-refactor'
   # pod 'WordPressAuthenticator', path: '../WordPressAuthenticator-iOS'
 
   pod 'MediaEditor', '~> 1.2', '>= 1.2.2'
